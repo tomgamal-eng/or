@@ -1,0 +1,636 @@
+<?php
+// translations.php - Bilingual content management
+
+// Detect language from URL parameter or default to German
+$lang = isset($_GET['lang']) ? $_GET['lang'] : 'de';
+if ($lang !== 'de' && $lang !== 'en') {
+    $lang = 'de';
+}
+
+$translations = [
+    'de' => [
+        // Navigation
+        'nav_home' => 'Home',
+        'nav_team' => 'Unser Team',
+        'nav_rent' => 'Raum Mieten',
+        'nav_therapists' => 'Therapeuten',
+        'nav_video' => 'Video',
+        'nav_contact' => 'Kontakt',
+        
+        // Hero Section
+        'hero_title' => 'OR Natural Balance',
+        'hero_subtitle' => 'Holistischer Heilungsraum in Prenzlauer Berg',
+        'hero_tagline' => 'Körperarbeit • Heilung • Transformation',
+        
+        // Box 1 - Raum Mieten
+        'box1_title' => 'Raum Mieten',
+        'box1_text' => 'Miete unseren professionellen Therapieraum für deine Praxis',
+        'box1_button' => 'Mehr erfahren',
+        
+        // Box 2 - Unser Team
+        'box2_title' => 'Unser Team',
+        'box2_text' => 'Buche eine Session mit Tom, Aya oder Jan',
+        'box2_button' => 'Team kennenlernen',
+        
+        // Box 3 - Therapeuten
+        'box3_title' => 'Therapeuten im Studio',
+        'box3_text' => 'Entdecke alle Therapeuten in unserem Heilungsraum',
+        'box3_button' => 'Alle Therapeuten',
+        
+        // Box 4 - Video
+        'box4_title' => 'Video Produktion',
+        'box4_text' => 'Professionelle Videos für dein Business mit Mischa',
+        'box4_button' => 'Mehr erfahren',
+        
+        // CTA Section
+        'cta_text' => 'Bereit für deine Transformation?',
+        'cta_button' => 'Kontaktiere uns',
+        
+        // Footer
+        'footer_address' => 'Immanuelkirchstraße 22, 10405 Berlin',
+        'footer_phone' => 'Tel: 0176-242-242-24',
+        'footer_email' => 'Email: natural.balance.berlin@gmail.com',
+        'footer_terms' => 'AGB',
+        'footer_imprint' => 'Impressum',
+        
+        // Team Page
+        'team_hero_title' => 'Unser Team',
+        'team_hero_subtitle' => 'Erfahrene Therapeuten für Körperarbeit und Heilung',
+        
+        // Tom
+        'tom_name' => 'Keshet Tom',
+        'tom_role' => 'Gründer & Yellow Dragon Practitioner',
+        'tom_description' => 'Tom hat die Yellow Dragon Methode entwickelt - eine einzigartige Verbindung von Tiefengewebemassage und trauma-informierter Körperarbeit.',
+        'tom_services' => 'Yellow Dragon Methode, Tiefengewebemassage, Trauma-informierte Körperarbeit, Paarmassage',
+        'meet_tom' => 'Begegne Tom',
+        'yellow_dragon_button' => 'Mehr über Yellow Dragon',
+        'book_appointment' => 'Termin buchen',
+        
+        // Aya
+        'aya_name' => 'Aya',
+        'aya_role' => 'Therapeutin',
+        'aya_description' => 'Aya bietet sanfte, regenerierende Körperarbeit und traditionelle Rituale für tiefe Entspannung.',
+        'aya_services' => 'Entspannungsmassage, Rebozo, Bed of Nails Practice, Closing of Bones Ritual',
+        'meet_aya' => 'Begegne Aya',
+        
+        // Yan
+        'yan_name' => 'Yan',
+        'yan_role' => 'Therapeut',
+        'yan_description' => 'Yan bietet professionelle Entspannungsmassagen für tiefe Regeneration und Stressabbau.',
+        'yan_services' => 'Entspannungsmassage',
+        'meet_yan' => 'Begegne Yan',
+        
+        // Common
+        'services_label' => 'Leistungen',
+        'prices_label' => 'Preise',
+        'price_1h' => '1 Std: 85€',
+        'price_15h' => '1,5 Std: 120€',
+        'price_2h' => '2 Std: 150€',
+        
+        // Yellow Dragon Page
+        'yd_hero_title' => 'Yellow Dragon',
+        'yd_hero_subtitle' => 'Trauma-Focused Bodywork',
+        'yd_hero_tagline' => 'A Journey of Healing and Transformation',
+        
+        'yd_intro_title' => 'Einführung',
+        'yd_intro_text' => 'The Yellow Dragon Massage system is an esoteric, holistic approach that combines physical massage techniques with spiritual and energetic concepts, designed to release emotional tension and post-traumatic stress stored in the body and emotional field. It activates the body\'s natural self-healing abilities, addressing old trauma, emotional scars, and developmental trauma (including baby trauma), and ultimately aims to bring harmony between the body, mind, and spirit.',
+        
+        'yd_goal_title' => 'The Goal',
+        'yd_goal_text' => 'Yellow Dragon Massage seeks to promote physical well-being by supporting the release of emotional tensions and energy blockages held in the body. The focus is on opening muscular blocks to allow the natural flow of energy, fostering relaxation, and encouraging inner balance. By helping align the chakras and activate the body\'s energy systems, the practice supports overall wellness and facilitates the healing of past emotional wounds, including those related to developmental trauma and baby trauma.',
+        
+        'yd_concepts_title' => 'Core Concepts',
+        'yd_concept1_title' => 'Emotional and Physical Tension',
+        'yd_concept1_text' => 'Emotional pain, trauma, and stress can become stored in the body and subconscious mind, manifesting as physical discomfort, tension, and false posture.',
+        'yd_concept2_title' => 'Trauma Storage in the Body',
+        'yd_concept2_text' => 'The body holds memories of past experiences, and certain areas, such as the back and buttocks, can reflect emotional blockages and unresolved trauma, including developmental and baby trauma.',
+        'yd_concept3_title' => 'Energy Flow and Balance',
+        'yd_concept3_text' => 'The Yellow Dragon Massage helps release energetic blockages, promoting the free flow of energy (including Kundalini energy) and supporting the alignment of the body\'s energy centers (chakras).',
+        'yd_concept4_title' => 'Masculine and Feminine Energy',
+        'yd_concept4_text' => 'The left side of the body is associated with feminine energy, while the right side represents masculine energy. Addressing imbalances in these areas can support emotional and energetic well-being.',
+        
+        'yd_approach_title' => 'Approach',
+        'yd_approach_intro' => 'Yellow Dragon Massage works on multiple levels:',
+        'yd_approach1' => 'Physical: Addressing muscle tension, joint mobility, lymphatic drainage, posture, and overall physical alignment.',
+        'yd_approach2' => 'Emotional: Providing a space for individuals to connect with and release emotional pain and stress, including unresolved developmental trauma and baby trauma.',
+        'yd_approach3' => 'Energetic: Opening energy channels and encouraging the natural flow of life force energy.',
+        'yd_approach4' => 'Spiritual: Setting healing intentions and offering a space for deep relaxation and self-awareness.',
+        
+        'yd_techniques_title' => 'Techniques',
+        'yd_physical_title' => 'Physical Techniques',
+        'yd_physical_text' => 'The session begins with a discussion about any physical preconditions to ensure safe treatment. Deep tissue massage is applied as needed, always prioritizing client comfort. The massage follows the energetic pathways, including energy channels, chakras, and the flow of Kundalini energy. The focus is on releasing physical blocks and tension while ensuring the client remains relaxed, present, and comfortable throughout the session.',
+        'yd_energetic_title' => 'Energetic Techniques',
+        'yd_energetic_text' => 'Silent communication and energy work are integral components of the session, facilitating the flow of energy and supporting relaxation. Techniques such as pranayama (breathing exercises) are used to maintain energy balance between the practitioner and the client, promoting a harmonious exchange of energy. After the session, a process of energetic separation is employed to ensure that any tension or "pain-body" released during the session remains detached from the client, leaving them with a sense of clarity and balance.',
+        
+        'yd_system_title' => 'The Yellow Dragon System',
+        'yd_system_text' => 'Developed by Keshet Tom, the Yellow Dragon Massage system is informed by years of experience and practices such as Tai Chi, Yoga, Kundalini Yoga, Pranayama, Meditation, and Massage. The work also incorporates the insights from Alice Miller\'s research on developmental trauma, which emphasizes how early emotional experiences—such as those in infancy and childhood—can shape our physical and emotional health.',
+        
+        'yd_about_title' => 'About Keshet Tom',
+        'yd_about_text' => 'Born in 1971 in Israel, Keshet Tom\'s personal experiences with trauma led him to explore alternative healing methods. His journey includes learning various spiritual and physical practices, including Tai Chi, Yoga, and massage, which he has been practicing since the age of 16. Over the last 7 years, Tom has worked with thousands of clients in Berlin, combining his deep knowledge of energy work, bodywork, and emotional healing, particularly focusing on the release of developmental trauma and baby trauma, which can deeply impact one\'s emotional and physical well-being. Tom believes in the transformative power of healing through connection and is passionate about breaking through traditional limitations in the wellness and health fields. His goal is to offer a more holistic and expansive approach to personal growth, healing, and well-being.',
+        
+        'yd_cta_title' => 'Ready to Experience Yellow Dragon?',
+        'yd_cta_text' => 'Book your session with Keshet Tom and begin your journey of healing and transformation.',
+        'yd_cta_button' => 'Termin buchen',
+        
+        // Therapeuten Page
+        'therapeuten_hero_title' => 'Unsere Therapeuten',
+        'therapeuten_hero_subtitle' => 'Entdecke professionelle Therapeuten in unserem Heilungsraum',
+        
+        'category_psychologists' => 'Psychologen',
+        
+        // Ana Morin
+        'ana_name' => 'Ana Morin',
+        'ana_specialty' => 'Paartherapie & Sexualtherapie',
+        'ana_description' => 'Urteilsfreier, personenzentrierter und ganzheitlicher Ansatz. Spezialisiert auf Beziehungen, Sexualität und Polyamorie.',
+        'ana_website' => 'https://anamorin.de/about-ana/',
+        'ana_email' => 'praxis@anamorin.de',
+        
+        // Francois de Wet
+        'francois_name' => 'Francois de Wet',
+        'francois_title' => 'MA (Clin Psych)',
+        'francois_specialty' => 'Klinische Psychologie, EMDR & Psychedelische Integration',
+        'francois_description' => 'Existenzieller Ansatz mit Fokus auf Trauma, Selbstbewusstsein und persönliches Wachstum. CBT, EMDR und psychodynamische Therapie.',
+        'francois_website' => 'https://complicated.life/find-a-therapist/berlin/psychodynamic-psychotherapist-francois-de-wet',
+        
+        // Common
+        'learn_more' => 'Mehr erfahren',
+        'website' => 'Website',
+        'email' => 'E-Mail',
+        
+        // Raum Mieten Page
+        'rent_hero_title' => 'Raum Mieten',
+        'rent_hero_subtitle' => 'Professionelle Praxisräume in Prenzlauer Berg',
+        'rent_hero_tagline' => 'Dein Raum für holistische Praxis',
+        
+        'rent_intro' => 'Suchst du mehr als nur ein steriles Büro – ein echtes Refugium für deine Praxis?
+
+Willkommen bei OR Natural Balance in der Immanuelkirchstraße in Berlin-Prenzlauer Berg. Flexible, bezahlbare Praxisräume mit Seele in Top-Lage zu finden, ist in Berlin fast unmöglich. Wir bieten genau das: Einen professionellen, repräsentativen Arbeitsplatz mit Wärme, Grün und Atmosphäre.
+
+Alle holistischen Praktiken sind willkommen: Ob Psychologe, Coach, Körpertherapeut, Klangtherapeut oder Bewegungspraktiker – wenn du mit Herz und Präsenz arbeitest, bist du hier richtig.',
+        
+        'rent_options_title' => 'Deine Mietoptionen',
+        'rent_options_intro' => 'Wir vermieten feste Wochentage (Montag–Freitag) und Wochenendtage zur Untermiete. Dein Tag gehört dir jede Woche exklusiv, mit eigenem Schlüssel für maximale Unabhängigkeit.
+
+Nutzungszeiten: 06:00–20:00 Uhr',
+        
+        'rent_large_title' => 'Der Große Praxisraum',
+        'rent_large_size' => 'Größe: ca. 30 m²',
+        'rent_large_ideal' => 'Ideal für: Paartherapie, Gruppensitzungen, Körperarbeit, High-Level Coaching',
+        'rent_large_features' => '2 Massageliegen (optionale Nutzung), Gemütliche Sitzecke mit Sofa und Sessel, Klangequipment und großformatige Kunstwerke, Geräumig und vielseitig',
+        'rent_large_price' => '€285/Monat für einen festen Wochentag',
+        'rent_large_note' => '(Das sind nur €71 pro Nutzungstag – gedeckt mit einer einzigen Sitzung!)',
+        'rent_large_weekend' => 'Wochenendtarif: €95 pro Wochenendtag (Samstag oder Sonntag)',
+        
+        'rent_small_title' => 'Der Kleine Praxisraum',
+        'rent_small_size' => 'Größe: ca. 6 m²',
+        'rent_small_ideal' => 'Ideal für: Einzeltherapie, Psychologie-Sitzungen, Coaching, energetische Arbeit',
+        'rent_small_features' => 'Vollständig ausgestattet, intimer Raum, Perfekt für Einzelsitzungen, Ruhig und privat',
+        'rent_small_price' => '€165/Monat für einen festen Wochentag',
+        'rent_small_note' => '(Das sind nur €41 pro Nutzungstag)',
+        'rent_small_weekend' => 'Wochenendtarif: €55 pro Wochenendtag',
+        
+        'rent_advantages_title' => 'Deine Vorteile',
+        'rent_adv1' => 'Top-Lage: Winsviertel (Immanuelkirchstraße) – deine Klienten werden die Gegend lieben',
+        'rent_adv2' => 'Sichtbarkeit inklusive: Profil & Foto auf unserer Website (OR Natural Balance)',
+        'rent_adv3' => 'Wohlfühlatmosphäre: Gemütlicher Teppich, Pflanzen, entspannte "Sanctuary-Vibe"',
+        'rent_adv4' => 'All Inclusive: WiFi, Strom, Heizung, Reinigung & Teeküche inklusive',
+        'rent_adv5' => 'Professionelle Gemeinschaft: Werde Teil unseres Netzwerks holistischer Praktiker',
+        'rent_adv6' => 'Stabiler Kundenstamm: Besonders attraktiv für Psychologen & Coaches mit regelmäßigen wöchentlichen Klienten',
+        
+        'rent_bonus_title' => '🎥 Dein Marketing-Bonus: Professionelle Videoproduktion',
+        'rent_bonus_text' => 'Für langfristige Verpflichtungen (6+ Monate) schenken wir dir:
+
+• Professionelles Einführungsvideo (bis zu 90 Sek.)
+• Gefilmt von einem professionellen Videografen
+• Im Landscape- UND Portrait-Format
+• Veröffentlicht auf unserer Website & Instagram',
+        
+        'rent_conditions_title' => 'Konditionen',
+        'rent_conditions_deposit' => 'Kaution: 2 Monatsmieten',
+        'rent_conditions_availability' => 'Verfügbarkeit: Sofort / nach Vereinbarung',
+        
+        'rent_cta_title' => 'Bereit für deinen neuen Praxisraum?',
+        'rent_cta_text' => 'Wir legen Wert auf eine stimmige und harmonische Gesamtatmosphäre und wählen sorgfältig aus, wer zu uns passt.
+
+Fühlt sich das nach dem richtigen Ort für dich an?',
+        'rent_cta_contact' => 'Kontaktiere uns:
+• Nachricht oder direkt anrufen
+• Erzähl uns kurz:
+  - Was bietest du an?
+  - Welcher Raum interessiert dich?
+  - Welche(n) Tag(e) suchst du?
+
+Wir senden dir gerne einen Link zur Video-Tour auf Anfrage!',
+        'rent_cta_button' => 'Jetzt Kontakt aufnehmen',
+        
+        // Contact Page
+        'contact_hero_title' => 'Kontakt',
+        'contact_hero_subtitle' => 'Wir freuen uns von dir zu hören',
+        'contact_address_title' => 'Adresse',
+        'contact_phone_title' => 'Telefon',
+        'contact_email_title' => 'E-Mail',
+        'contact_location_title' => 'Standort',
+        
+        // Impressum Page
+        'impressum_title' => 'Impressum',
+        'impressum_owner' => 'Inhaber',
+        'impressum_tax' => 'St.-Nr.',
+        
+        // AGB Page
+        'agb_title' => 'Allgemeine Geschäftsbedingungen',
+    ],
+    
+    'en' => [
+        // Navigation
+        'nav_home' => 'Home',
+        'nav_team' => 'Our Team',
+        'nav_rent' => 'Rent Space',
+        'nav_therapists' => 'Therapists',
+        'nav_video' => 'Video',
+        'nav_contact' => 'Contact',
+        
+        // Hero Section
+        'hero_title' => 'OR Natural Balance',
+        'hero_subtitle' => 'Holistic Healing Space in Prenzlauer Berg',
+        'hero_tagline' => 'Bodywork • Healing • Transformation',
+        
+        // Box 1 - Raum Mieten
+        'box1_title' => 'Rent Our Space',
+        'box1_text' => 'Rent our professional therapy room for your practice',
+        'box1_button' => 'Learn more',
+        
+        // Box 2 - Unser Team
+        'box2_title' => 'Our Team',
+        'box2_text' => 'Book a session with Tom, Aya or Jan',
+        'box2_button' => 'Meet the team',
+        
+        // Box 3 - Therapeuten
+        'box3_title' => 'Studio Therapists',
+        'box3_text' => 'Discover all therapists in our healing space',
+        'box3_button' => 'All Therapists',
+        
+        // Box 4 - Video
+        'box4_title' => 'Video Production',
+        'box4_text' => 'Professional videos for your business with Mischa',
+        'box4_button' => 'Learn more',
+        
+        // CTA Section
+        'cta_text' => 'Ready for your transformation?',
+        'cta_button' => 'Contact us',
+        
+        // Footer
+        'footer_address' => 'Immanuelkirchstraße 22, 10405 Berlin',
+        'footer_phone' => 'Phone: 0176-242-242-24',
+        'footer_email' => 'Email: natural.balance.berlin@gmail.com',
+        'footer_terms' => 'Terms',
+        'footer_imprint' => 'Imprint',
+        
+        // Team Page
+        'team_hero_title' => 'Our Team',
+        'team_hero_subtitle' => 'Experienced Therapists for Bodywork and Healing',
+        
+        // Tom
+        'tom_name' => 'Keshet Tom',
+        'tom_role' => 'Founder & Yellow Dragon Practitioner',
+        'tom_description' => 'Tom developed the Yellow Dragon Method - a unique combination of deep tissue massage and trauma-informed bodywork.',
+        'tom_services' => 'Yellow Dragon Method, Deep Tissue Massage, Trauma-Informed Bodywork, Couples Massage',
+        'meet_tom' => 'Meet Tom',
+        'yellow_dragon_button' => 'Learn about Yellow Dragon',
+        'book_appointment' => 'Book Appointment',
+        
+        // Aya
+        'aya_name' => 'Aya',
+        'aya_role' => 'Therapist',
+        'aya_description' => 'Aya offers gentle, regenerative bodywork and traditional rituals for deep relaxation.',
+        'aya_services' => 'Relaxation Massage, Rebozo, Bed of Nails Practice, Closing of Bones Ritual',
+        'meet_aya' => 'Meet Aya',
+        
+        // Yan
+        'yan_name' => 'Yan',
+        'yan_role' => 'Therapist',
+        'yan_description' => 'Yan offers professional relaxation massages for deep regeneration and stress relief.',
+        'yan_services' => 'Relaxation Massage',
+        'meet_yan' => 'Meet Yan',
+        
+        // Common
+        'services_label' => 'Services',
+        'prices_label' => 'Prices',
+        'price_1h' => '1 hour: 85€',
+        'price_15h' => '1.5 hours: 120€',
+        'price_2h' => '2 hours: 150€',
+        
+        // Yellow Dragon Page  
+        'yd_hero_title' => 'Yellow Dragon',
+        'yd_hero_subtitle' => 'Trauma-Focused Bodywork',
+        'yd_hero_tagline' => 'A Journey of Healing and Transformation',
+        
+        'yd_intro_title' => 'Introduction',
+        'yd_intro_text' => 'The Yellow Dragon Massage system is an esoteric, holistic approach that combines physical massage techniques with spiritual and energetic concepts, designed to release emotional tension and post-traumatic stress stored in the body and emotional field. It activates the body\'s natural self-healing abilities, addressing old trauma, emotional scars, and developmental trauma (including baby trauma), and ultimately aims to bring harmony between the body, mind, and spirit.',
+        
+        'yd_goal_title' => 'The Goal',
+        'yd_goal_text' => 'Yellow Dragon Massage seeks to promote physical well-being by supporting the release of emotional tensions and energy blockages held in the body. The focus is on opening muscular blocks to allow the natural flow of energy, fostering relaxation, and encouraging inner balance. By helping align the chakras and activate the body\'s energy systems, the practice supports overall wellness and facilitates the healing of past emotional wounds, including those related to developmental trauma and baby trauma.',
+        
+        'yd_concepts_title' => 'Core Concepts',
+        'yd_concept1_title' => 'Emotional and Physical Tension',
+        'yd_concept1_text' => 'Emotional pain, trauma, and stress can become stored in the body and subconscious mind, manifesting as physical discomfort, tension, and false posture.',
+        'yd_concept2_title' => 'Trauma Storage in the Body',
+        'yd_concept2_text' => 'The body holds memories of past experiences, and certain areas, such as the back and buttocks, can reflect emotional blockages and unresolved trauma, including developmental and baby trauma.',
+        'yd_concept3_title' => 'Energy Flow and Balance',
+        'yd_concept3_text' => 'The Yellow Dragon Massage helps release energetic blockages, promoting the free flow of energy (including Kundalini energy) and supporting the alignment of the body\'s energy centers (chakras).',
+        'yd_concept4_title' => 'Masculine and Feminine Energy',
+        'yd_concept4_text' => 'The left side of the body is associated with feminine energy, while the right side represents masculine energy. Addressing imbalances in these areas can support emotional and energetic well-being.',
+        
+        'yd_approach_title' => 'Approach',
+        'yd_approach_intro' => 'Yellow Dragon Massage works on multiple levels:',
+        'yd_approach1' => 'Physical: Addressing muscle tension, joint mobility, lymphatic drainage, posture, and overall physical alignment.',
+        'yd_approach2' => 'Emotional: Providing a space for individuals to connect with and release emotional pain and stress, including unresolved developmental trauma and baby trauma.',
+        'yd_approach3' => 'Energetic: Opening energy channels and encouraging the natural flow of life force energy.',
+        'yd_approach4' => 'Spiritual: Setting healing intentions and offering a space for deep relaxation and self-awareness.',
+        
+        'yd_techniques_title' => 'Techniques',
+        'yd_physical_title' => 'Physical Techniques',
+        'yd_physical_text' => 'The session begins with a discussion about any physical preconditions to ensure safe treatment. Deep tissue massage is applied as needed, always prioritizing client comfort. The massage follows the energetic pathways, including energy channels, chakras, and the flow of Kundalini energy. The focus is on releasing physical blocks and tension while ensuring the client remains relaxed, present, and comfortable throughout the session.',
+        'yd_energetic_title' => 'Energetic Techniques',
+        'yd_energetic_text' => 'Silent communication and energy work are integral components of the session, facilitating the flow of energy and supporting relaxation. Techniques such as pranayama (breathing exercises) are used to maintain energy balance between the practitioner and the client, promoting a harmonious exchange of energy. After the session, a process of energetic separation is employed to ensure that any tension or "pain-body" released during the session remains detached from the client, leaving them with a sense of clarity and balance.',
+        
+        'yd_system_title' => 'The Yellow Dragon System',
+        'yd_system_text' => 'Developed by Keshet Tom, the Yellow Dragon Massage system is informed by years of experience and practices such as Tai Chi, Yoga, Kundalini Yoga, Pranayama, Meditation, and Massage. The work also incorporates the insights from Alice Miller\'s research on developmental trauma, which emphasizes how early emotional experiences—such as those in infancy and childhood—can shape our physical and emotional health.',
+        
+        'yd_about_title' => 'About Keshet Tom',
+        'yd_about_text' => 'Born in 1971 in Israel, Keshet Tom\'s personal experiences with trauma led him to explore alternative healing methods. His journey includes learning various spiritual and physical practices, including Tai Chi, Yoga, and massage, which he has been practicing since the age of 16. Over the last 7 years, Tom has worked with thousands of clients in Berlin, combining his deep knowledge of energy work, bodywork, and emotional healing, particularly focusing on the release of developmental trauma and baby trauma, which can deeply impact one\'s emotional and physical well-being. Tom believes in the transformative power of healing through connection and is passionate about breaking through traditional limitations in the wellness and health fields. His goal is to offer a more holistic and expansive approach to personal growth, healing, and well-being.',
+        
+        'yd_cta_title' => 'Ready to Experience Yellow Dragon?',
+        'yd_cta_text' => 'Book your session with Keshet Tom and begin your journey of healing and transformation.',
+        'yd_cta_button' => 'Book Appointment',
+        
+        // Therapeuten Page
+        'therapeuten_hero_title' => 'Our Practitioners',
+        'therapeuten_hero_subtitle' => 'Discover professional practitioners in our healing space',
+        
+        'category_psychologists' => 'Psychologists',
+        
+        // Ana Morin
+        'ana_name' => 'Ana Morin',
+        'ana_specialty' => 'Couples Therapy & Sex Therapy',
+        'ana_description' => 'Judgment-free, person-oriented and holistic approach. Specialized in relationships, sexuality and polyamory.',
+        'ana_website' => 'https://anamorin.de/about-ana/',
+        'ana_email' => 'praxis@anamorin.de',
+        
+        // Francois de Wet
+        'francois_name' => 'Francois de Wet',
+        'francois_title' => 'MA (Clin Psych)',
+        'francois_specialty' => 'Clinical Psychology, EMDR & Psychedelic Integration',
+        'francois_description' => 'Existential approach focusing on trauma, self-awareness and personal growth. CBT, EMDR and psychodynamic therapy.',
+        'francois_website' => 'https://complicated.life/find-a-therapist/berlin/psychodynamic-psychotherapist-francois-de-wet',
+        
+        // Common
+        'learn_more' => 'Learn More',
+        'website' => 'Website',
+        'email' => 'Email',
+        
+        // Raum Mieten Page
+        'rent_hero_title' => 'Rent Space',
+        'rent_hero_subtitle' => 'Professional Practice Rooms in Prenzlauer Berg',
+        'rent_hero_tagline' => 'Your sanctuary for holistic practice',
+        
+        'rent_intro' => 'Are you looking for more than just a sterile office – a true sanctuary for your practice?
+
+Welcome to OR Natural Balance on Immanuelkirchstraße in Berlin-Prenzlauer Berg. Finding flexible, affordable practice rooms with soul in a prime location is nearly impossible in Berlin. We offer exactly that: A professional, representative workspace with warmth, greenery, and atmosphere.
+
+All holistic practices are welcome: Whether you\'re a psychologist, coach, bodyworker, sound therapist, or movement practitioner – if you work with heart and presence, this is your place.',
+        
+        'rent_options_title' => 'Your Rental Options',
+        'rent_options_intro' => 'We rent fixed weekdays (Monday–Friday) and weekend days for sublease. Your day belongs to you exclusively every week, with your own key for maximum independence.
+
+Usage hours: 06:00–20:00',
+        
+        'rent_large_title' => 'The Large Practice Room',
+        'rent_large_size' => 'Size: approx. 30 m²',
+        'rent_large_ideal' => 'Ideal for: Couples therapy, group sessions, bodywork, high-level coaching',
+        'rent_large_features' => '2 massage tables (optional use), Cozy seating area with sofa and armchair, Sound equipment and large-format artworks, Spacious and versatile',
+        'rent_large_price' => '€285/month for a fixed weekday',
+        'rent_large_note' => '(That\'s only €71 per usage day – covered with a single session!)',
+        'rent_large_weekend' => 'Weekend rate: €95 per weekend day (Saturday or Sunday)',
+        
+        'rent_small_title' => 'The Small Practice Room',
+        'rent_small_size' => 'Size: approx. 6 m²',
+        'rent_small_ideal' => 'Ideal for: Individual therapy, psychology sessions, coaching, energy work',
+        'rent_small_features' => 'Fully equipped, intimate space, Perfect for one-on-one sessions, Quiet and private',
+        'rent_small_price' => '€165/month for a fixed weekday',
+        'rent_small_note' => '(That\'s only €41 per usage day)',
+        'rent_small_weekend' => 'Weekend rate: €55 per weekend day',
+        
+        'rent_advantages_title' => 'Your Advantages',
+        'rent_adv1' => 'Prime Location: Winsviertel (Immanuelkirchstraße) – your clients will love the neighborhood',
+        'rent_adv2' => 'Visibility Included: Profile & photo on our official website (OR Natural Balance)',
+        'rent_adv3' => 'Feel-Good Atmosphere: Cozy carpeting, plants, and a relaxed "sanctuary vibe"',
+        'rent_adv4' => 'All Inclusive: WiFi, electricity, heating, cleaning & tea kitchen included',
+        'rent_adv5' => 'Professional Community: Join our network of holistic practitioners',
+        'rent_adv6' => 'Stable Client Base: Especially attractive for psychologists & coaches with regular weekly clients',
+        
+        'rent_bonus_title' => '🎥 Your Marketing Bonus: Professional Video Production',
+        'rent_bonus_text' => 'For long-term commitments (6+ months), we gift you:
+
+• Professional introduction video (up to 90 sec)
+• Filmed by a professional videographer
+• Delivered in Landscape AND Portrait format
+• Published on our website & Instagram',
+        
+        'rent_conditions_title' => 'Conditions',
+        'rent_conditions_deposit' => 'Deposit: 2 months\' rent',
+        'rent_conditions_availability' => 'Availability: Immediate / by arrangement',
+        
+        'rent_cta_title' => 'Ready for your new practice space?',
+        'rent_cta_text' => 'We value a harmonious overall atmosphere and carefully select who fits with us.
+
+Does this feel like the right place for you?',
+        'rent_cta_contact' => 'Contact us:
+• Message or call directly
+• Tell us briefly:
+  - What do you offer?
+  - Which room interests you?
+  - Which day(s) are you looking for?
+
+We\'re happy to send you a video tour link upon request!',
+        'rent_cta_button' => 'Contact Us Now',
+        
+        // Contact Page
+        'contact_hero_title' => 'Contact',
+        'contact_hero_subtitle' => 'We\'d love to hear from you',
+        'contact_address_title' => 'Address',
+        'contact_phone_title' => 'Phone',
+        'contact_email_title' => 'Email',
+        'contact_location_title' => 'Location',
+        
+        // Impressum Page
+        'impressum_title' => 'Legal Notice',
+        'impressum_owner' => 'Owner',
+        'impressum_tax' => 'Tax ID',
+        
+        // AGB Page
+        'agb_title' => 'Terms and Conditions',
+    ]
+];
+
+// Helper function to get translated text
+function t($key) {
+    global $translations, $lang;
+    return $translations[$lang][$key] ?? $key;
+}
+
+// Helper function to create language switch URL
+function langUrl($new_lang) {
+    $current_url = $_SERVER['REQUEST_URI'];
+    $base_url = strtok($current_url, '?');
+    return $base_url . '?lang=' . $new_lang;
+}
+?>
+
+        // Tom Personal Page
+        'tom_hero_subtitle' => 'Gründer & Yellow Dragon Practitioner',
+        'tom_hero_quote' => 'Die Selbstheilung sollte bei Jedem an erster Stelle stehen.',
+        'tom_about_title' => 'Über mich',
+        'tom_about_text' => 'Massage ist meine Berufung und Leidenschaft.
+
+Seit etwa 37 Jahren praktiziere ich und habe basierend auf meiner langen Erfahrung einen Massagestil entwickelt, den Yellow Dragon, der verschiedene Massagetechniken miteinander verbindet. Mein Ziel ist es, das Allgemeinbefinden meiner Klienten zu verbessern, tiefe Entspannung zu fördern und emotionale Blockaden, die im Körper gespeichert sind, zu lösen.',
+        'tom_trauma_title' => 'Meine Arbeit im Bereich Trauma und emotionale Heilung',
+        'tom_trauma_text' => 'In meiner Arbeit konzentriere ich mich besonders auf das Lösen von emotionalen Spannungen und Stress, die im Körper und im emotionalen Feld gespeichert sind. Häufig entstehen diese Spannungen durch frühkindliche Traumata und Entwicklungstraumata, die sich über die Jahre im Körper manifestieren können.
+
+Ich verstehe jede Massagebehandlung als eine Möglichkeit, diese Blockaden zu lösen und den Körper und Geist von eingelagertem Schmerz und Stress zu befreien. Dabei arbeite ich mit einer Kombination von Tiefen-Massage, energetischen Heilmethoden und körperorientierten Techniken.',
+        'tom_techniques_title' => 'Techniken',
+        'tom_tech1' => 'Tiefen-Massage',
+        'tom_tech2' => 'Reiki',
+        'tom_tech3' => 'Tai Chi',
+        'tom_tech4' => 'Atemtechniken',
+        'tom_tech5' => 'Arbeit mit emotionalen Blockaden',
+        'tom_services_title' => 'Massage bei Tom',
+        'tom_services_note' => 'Die Art der Massage und besondere Wünsche werden im Vorgespräch gemeinsam geklärt.',
+        'tom_price_60' => '60 Min: 85€',
+        'tom_price_90' => '90 Min: 120€',
+        'tom_price_120' => '120 Min: 150€',
+        'tom_price_partner' => 'Partner Massage Workshop: 150€',
+        'tom_cta_title' => 'Bereit für deine Heilungsreise?',
+        'tom_gallery_title' => 'Galerie',
+        
+        // Aya Personal Page
+        'aya_hero_subtitle' => 'Massage, Rebozo & Rituals',
+        'aya_intro_title' => 'Über mich',
+        'aya_intro_text' => 'Hello, my name is Aya and I work with body and states.
+
+Keywords for my massage style: attentive and filled with love.
+
+Each session will be adapted to your specific needs and requests for an individual experience.',
+        'aya_services_title' => 'Meine Angebote',
+        'aya_service1_title' => 'Massage',
+        'aya_service1_text' => 'You can choose from different massage techniques (Swedish, aromatherapy, lomi-lomi, etc.) A popular combination is that of deep tissue and soft relaxation approaches.',
+        'aya_service2_title' => 'Rebozo Massage',
+        'aya_service2_text' => 'A very soft, non-contact vibration technique from Mexico, using traditional Rebozo scarves to gently rock and stretch the body.
+
+• The vibrations reach deeper into the body than is possible with hands
+• Induces profound relaxation that improves blood flow and calms the nervous system
+• Helps in letting go of control, learning to surrender and trust
+• Nurtures the Inner Child',
+        'aya_service3_title' => 'Bed of Nails Practice',
+        'aya_service3_text' => 'An ancient Indian Yogic Practice that works on both the physical and energy bodies. It is an intense practice of stimulating fire energy.',
+        'aya_service4_title' => 'Closing of the Bones Ritual',
+        'aya_service4_text' => 'This ritual is for anyone going through an important life transition: moving to a different country, loss of someone or something, giving birth, or any other big shifts in life.
+
+The ceremony lasts 5-7 hours and includes:
+• Warming drink (cocoa and spices)
+• Time to process your story
+• Making mandala from herbs
+• Rebozo massage
+• Bath with herbs
+• Body oiling
+• Pravki (Slavic abdominal massage)
+• Swaddling and cocoon wrapping',
+        'aya_prices_title' => 'Preise',
+        'aya_price_60' => '60 Min: 85€',
+        'aya_price_90' => '90 Min: 120€',
+        'aya_price_120' => '120 Min: 150€',
+        'aya_more_info' => 'Mehr Informationen: ayamo.life',
+        'aya_cta_title' => 'Bereit für eine Session?',
+        'aya_gallery_title' => 'Galerie',
+    ],
+
+        // Tom Personal Page - English
+        'tom_hero_subtitle' => 'Founder & Yellow Dragon Practitioner',
+        'tom_hero_quote' => 'Self-healing should be everyone\'s first priority.',
+        'tom_about_title' => 'About Me',
+        'tom_about_text' => 'Massage is my calling and passion.
+
+I have been practicing for about 37 years and, based on my extensive experience, I have developed a massage style called Yellow Dragon, which combines various massage techniques. My goal is to improve the overall well-being of my clients, promote deep relaxation, and release emotional blockages stored in the body.',
+        'tom_trauma_title' => 'My Work in Trauma and Emotional Healing',
+        'tom_trauma_text' => 'In my work, I focus particularly on releasing emotional tension and stress stored in the body and emotional field. These tensions often arise from early childhood trauma and developmental trauma, which can manifest in the body over time.
+
+I view each massage session as an opportunity to release these blockages and cleanse the body and mind from stored pain and stress. I work with a combination of deep tissue massage, energetic healing techniques, and body-oriented methods.',
+        'tom_techniques_title' => 'Techniques',
+        'tom_tech1' => 'Deep Tissue Massage',
+        'tom_tech2' => 'Reiki',
+        'tom_tech3' => 'Tai Chi',
+        'tom_tech4' => 'Breathing Techniques',
+        'tom_tech5' => 'Working with Emotional Blockages',
+        'tom_services_title' => 'Massage with Tom',
+        'tom_services_note' => 'The type of massage and special requests are clarified together in advance.',
+        'tom_price_60' => '60 Min: 85€',
+        'tom_price_90' => '90 Min: 120€',
+        'tom_price_120' => '120 Min: 150€',
+        'tom_price_partner' => 'Partner Massage Workshop: 150€',
+        'tom_cta_title' => 'Ready for your healing journey?',
+        'tom_gallery_title' => 'Gallery',
+        
+        // Aya Personal Page - English
+        'aya_hero_subtitle' => 'Massage, Rebozo & Rituals',
+        'aya_intro_title' => 'About Me',
+        'aya_intro_text' => 'Hello, my name is Aya and I work with body and states.
+
+Keywords for my massage style: attentive and filled with love.
+
+Each session will be adapted to your specific needs and requests for an individual experience.',
+        'aya_services_title' => 'My Services',
+        'aya_service1_title' => 'Massage',
+        'aya_service1_text' => 'You can choose from different massage techniques (Swedish, aromatherapy, lomi-lomi, etc.) A popular combination is that of deep tissue and soft relaxation approaches.',
+        'aya_service2_title' => 'Rebozo Massage',
+        'aya_service2_text' => 'A very soft, non-contact vibration technique from Mexico, using traditional Rebozo scarves to gently rock and stretch the body.
+
+• The vibrations reach deeper into the body than is possible with hands
+• Induces profound relaxation that improves blood flow and calms the nervous system
+• Helps in letting go of control, learning to surrender and trust
+• Nurtures the Inner Child',
+        'aya_service3_title' => 'Bed of Nails Practice',
+        'aya_service3_text' => 'An ancient Indian Yogic Practice that works on both the physical and energy bodies. It is an intense practice of stimulating fire energy.',
+        'aya_service4_title' => 'Closing of the Bones Ritual',
+        'aya_service4_text' => 'This ritual is for anyone going through an important life transition: moving to a different country, loss of someone or something, giving birth, or any other big shifts in life.
+
+The ceremony lasts 5-7 hours and includes:
+• Warming drink (cocoa and spices)
+• Time to process your story
+• Making mandala from herbs
+• Rebozo massage
+• Bath with herbs
+• Body oiling
+• Pravki (Slavic abdominal massage)
+• Swaddling and cocoon wrapping',
+        'aya_prices_title' => 'Prices',
+        'aya_price_60' => '60 Min: 85€',
+        'aya_price_90' => '90 Min: 120€',
+        'aya_price_120' => '120 Min: 150€',
+        'aya_more_info' => 'More information: ayamo.life',
+        'aya_cta_title' => 'Ready for a session?',
+        'aya_gallery_title' => 'Gallery',
+    ]
+
+];
+
+// Helper function to get translated text
+function t($key) {
+    global $translations, $lang;
+    return $translations[$lang][$key] ?? $key;
+}
+
+// Helper function to create language switch URL
+function langUrl($new_lang) {
+    $current_url = $_SERVER['REQUEST_URI'];
+    $base_url = strtok($current_url, '?');
+    return $base_url . '?lang=' . $new_lang;
+}
+?>
