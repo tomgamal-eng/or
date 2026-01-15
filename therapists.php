@@ -1,179 +1,117 @@
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/navigation.php'; ?>
+<?php
+// therapeuten.php - Therapists page translations
 
-<!-- Hero Section -->
-<section class="therapeuten-hero">
-    <h1><?php echo t('therapeuten_hero_title'); ?></h1>
-    <p><?php echo t('therapeuten_hero_subtitle'); ?></p>
-</section>
-
-<!-- Category Navigation -->
-<div class="category-nav">
-    <a href="#bodywork" class="category-nav-link">
-        🌿 <?php echo t('category_bodywork'); ?>
-    </a>
-    <a href="#psychology" class="category-nav-link">
-        🧠 <?php echo t('category_psychology'); ?>
-    </a>
-    <a href="#yoga" class="category-nav-link">
-        🧘‍♀️ <?php echo t('category_yoga'); ?>
-    </a>
-</div>
-
-<!-- Main Content -->
-<div class="therapeuten-content">
+$trans_de = [
+    'therapeuten_hero_title' => 'Studio Angebote',
+    'therapeuten_hero_subtitle' => 'Entdecke die Vielfalt unserer Heilpraktiker',
     
-    <div class="categories-grid">
-        
-        <!-- Body Work & Massage Column -->
-        <div class="category-column" id="bodywork">
-            <h2 class="category-column-title"><?php echo t('category_bodywork'); ?></h2>
-            
-            <!-- Tom Gamal -->
-            <div class="practitioner-card">
-                <div class="practitioner-image">🐉</div>
-                <h3><?php echo t('tom_name'); ?></h3>
-                <p class="practitioner-specialty"><?php echo t('tom_specialty_therapeuten'); ?></p>
-                <p class="practitioner-description"><?php echo t('tom_description_therapeuten'); ?></p>
-                
-                <div class="practitioner-contact">
-                    <a href="https://tommassage.de/booking/" target="_blank">
-                        📅 <?php echo t('book_appointment'); ?>
-                    </a>
-                </div>
-                
-                <a href="tom.php?lang=<?php echo $lang; ?>" class="practitioner-button">
-                    <?php echo t('learn_more'); ?>
-                </a>
-            </div>
-            
-            <!-- Aya -->
-            <div class="practitioner-card">
-                <div class="practitioner-image">🌸</div>
-                <h3><?php echo t('aya_name'); ?></h3>
-                <p class="practitioner-specialty"><?php echo t('aya_specialty_therapeuten'); ?></p>
-                <p class="practitioner-description"><?php echo t('aya_description_therapeuten'); ?></p>
-                
-                <div class="practitioner-contact">
-                    <a href="https://tommassage.de/booking/" target="_blank">
-                        📅 <?php echo t('book_appointment'); ?>
-                    </a>
-                    <a href="https://ayamo.life" target="_blank">
-                        🌐 <?php echo t('website'); ?>
-                    </a>
-                </div>
-                
-                <a href="aya.php?lang=<?php echo $lang; ?>" class="practitioner-button">
-                    <?php echo t('learn_more'); ?>
-                </a>
-            </div>
-            
-            <!-- Yan -->
-            <div class="practitioner-card">
-                <div class="practitioner-image">🌿</div>
-                <h3><?php echo t('yan_name'); ?></h3>
-                <p class="practitioner-specialty"><?php echo t('yan_specialty_therapeuten'); ?></p>
-                <p class="practitioner-description"><?php echo t('yan_description_therapeuten'); ?></p>
-                
-                <div class="practitioner-contact">
-                    <a href="https://tommassage.de/booking/" target="_blank">
-                        📅 <?php echo t('book_appointment'); ?>
-                    </a>
-                </div>
-                
-                <a href="yan.php?lang=<?php echo $lang; ?>" class="practitioner-button">
-                    <?php echo t('learn_more'); ?>
-                </a>
-            </div>
-            
-            <!-- Manuela Spaggiari -->
-            <div class="practitioner-card">
-                <div class="practitioner-image">🌿</div>
-                <h3><?php echo t('manuela_name'); ?></h3>
-                <p class="practitioner-specialty"><?php echo t('manuela_specialty'); ?></p>
-                <p class="practitioner-description"><?php echo t('manuela_description'); ?></p>
-                
-                <div class="practitioner-contact">
-                    <a href="<?php echo t('manuela_website'); ?>" target="_blank">
-                        🌐 <?php echo t('website'); ?>
-                    </a>
-                    <a href="mailto:<?php echo t('manuela_email'); ?>">
-                        ✉️ <?php echo t('email'); ?>
-                    </a>
-                </div>
-                
-                <a href="manuela.php?lang=<?php echo $lang; ?>" class="practitioner-button">
-                    <?php echo t('learn_more'); ?>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Psychology & Counseling Column -->
-        <div class="category-column" id="psychology">
-            <h2 class="category-column-title"><?php echo t('category_psychology'); ?></h2>
-            
-            <div class="practitioner-card">
-                <div class="practitioner-image">🧠</div>
-                <h3><?php echo t('ana_name'); ?></h3>
-                <p class="practitioner-specialty"><?php echo t('ana_specialty'); ?></p>
-                <p class="practitioner-description"><?php echo t('ana_description'); ?></p>
-                
-                <div class="practitioner-contact">
-                    <a href="<?php echo t('ana_website'); ?>" target="_blank">
-                        🌐 <?php echo t('website'); ?>
-                    </a>
-                    <a href="mailto:<?php echo t('ana_email'); ?>">
-                        ✉️ <?php echo t('email'); ?>
-                    </a>
-                </div>
-                
-                <a href="ana-morin.php?lang=<?php echo $lang; ?>" class="practitioner-button">
-                    <?php echo t('learn_more'); ?>
-                </a>
-            </div>
-            
-            <div class="practitioner-card">
-                <div class="practitioner-image">🧘</div>
-                <h3><?php echo t('francois_name'); ?></h3>
-                <p class="practitioner-title"><?php echo t('francois_title'); ?></p>
-                <p class="practitioner-specialty"><?php echo t('francois_specialty'); ?></p>
-                <p class="practitioner-description"><?php echo t('francois_description'); ?></p>
-                
-                <div class="practitioner-contact">
-                    <a href="<?php echo t('francois_website'); ?>" target="_blank">
-                        🌐 <?php echo t('website'); ?>
-                    </a>
-                </div>
-                
-                <a href="francois-de-wet.php?lang=<?php echo $lang; ?>" class="practitioner-button">
-                    <?php echo t('learn_more'); ?>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Yoga Column -->
-        <div class="category-column" id="yoga">
-            <h2 class="category-column-title"><?php echo t('category_yoga'); ?></h2>
-            
-            <div class="practitioner-card">
-                <div class="practitioner-image">🧘‍♀️</div>
-                <h3><?php echo t('claudia_name'); ?></h3>
-                <p class="practitioner-specialty"><?php echo t('claudia_specialty'); ?></p>
-                <p class="practitioner-description"><?php echo t('claudia_description'); ?></p>
-                
-                <div class="practitioner-contact">
-                    <a href="tel:017218020054">
-                        📞 0172 180 20 54
-                    </a>
-                    <a href="mailto:claudia.tiedemann@hotmail.de">
-                        ✉️ <?php echo t('email'); ?>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-    </div>
+    // Categories
+    'category_bodywork' => 'Körperarbeit & Massage',
+    'category_psychology' => 'Psychologie & Beratung',
+    'category_yoga' => 'Yoga',
     
-</div>
+    // Common Labels
+    'website' => 'Website',
+    'email' => 'E-Mail',
+    'learn_more' => 'Mehr erfahren',
+    'book_appointment' => 'Termin buchen',
+    
+    // Tom Gamal - Therapeuten Page
+    'tom_name' => 'Keshet Tom',
+    'tom_specialty_therapeuten' => 'Yellow Dragon Methode',
+    'tom_description_therapeuten' => 'Tiefengewebemassage kombiniert mit trauma-informierter Körperarbeit. 37 Jahre Erfahrung in der Lösung emotionaler Blockaden.',
+    
+    // Aya - Therapeuten Page
+    'aya_name' => 'Aya',
+    'aya_specialty_therapeuten' => 'Entspannungsmassage & Rituale',
+    'aya_description_therapeuten' => 'Sanfte, aufmerksame Körperarbeit mit Shiatsu-Elementen, Rebozo-Massage und traditionellen Heilungsritualen.',
+    
+    // Yan - Therapeuten Page
+    'yan_name' => 'Yan',
+    'yan_specialty_therapeuten' => 'Vibrationsarbeit & Aquatische Körperarbeit',
+    'yan_description_therapeuten' => 'Ruhiger, achtsamer Ansatz mit Shiatsu, Tok Sen, Sadhu Boards und Watsu. Fokus auf energetische Aspekte.',
+    
+    // Manuela Spaggiari
+    'manuela_name' => 'Manuela Spaggiari',
+    'manuela_specialty' => 'Thai Yoga Massage',
+    'manuela_description' => 'Kombination aus Akupressur, Dehnungen und Reflexzonenmassage für tiefe Entspannung und Energiearbeit.',
+    'manuela_website' => 'https://www.manuela-yoga-massage.com',
+    'manuela_email' => 'info@manuela-yoga-massage.com',
+    
+    // Ana Morin
+    'ana_name' => 'Ana Morin',
+    'ana_specialty' => 'Psychotherapie & Traumaarbeit',
+    'ana_description' => 'Ana bietet tiefgehende psychotherapeutische Arbeit mit Fokus auf Traumaheilung und emotionale Integration.',
+    'ana_website' => 'https://anamorin.com',
+    'ana_email' => 'ana@anamorin.com',
+    
+    // François de Wet
+    'francois_name' => 'François de Wet',
+    'francois_title' => 'M.A. Psychologie',
+    'francois_specialty' => 'Körperorientierte Psychotherapie',
+    'francois_description' => 'François arbeitet mit körperorientierten Methoden zur Behandlung von Trauma und Stress.',
+    'francois_website' => 'https://francoisdewet.com',
+    
+    // Claudia Arndt
+    'claudia_name' => 'Claudia Arndt',
+    'claudia_specialty' => 'Yoga',
+    'claudia_description' => 'Yoga jeden Dienstag um 09:00 Uhr im Studio.',
+];
 
-<?php include 'includes/footer.php'; ?>
+$trans_en = [
+    'therapeuten_hero_title' => 'Studio Services',
+    'therapeuten_hero_subtitle' => 'Discover the diversity of our healing practitioners',
+    
+    // Categories
+    'category_bodywork' => 'Body Work & Massage',
+    'category_psychology' => 'Psychology & Counseling',
+    'category_yoga' => 'Yoga',
+    
+    // Common Labels
+    'website' => 'Website',
+    'email' => 'Email',
+    'learn_more' => 'Learn more',
+    'book_appointment' => 'Book Appointment',
+    
+    // Tom Gamal - Therapeuten Page
+    'tom_name' => 'Keshet Tom',
+    'tom_specialty_therapeuten' => 'Yellow Dragon Method',
+    'tom_description_therapeuten' => 'Deep tissue massage combined with trauma-informed bodywork. 37 years of experience releasing emotional blockages.',
+    
+    // Aya - Therapeuten Page
+    'aya_name' => 'Aya',
+    'aya_specialty_therapeuten' => 'Relaxation Massage & Rituals',
+    'aya_description_therapeuten' => 'Gentle, attentive bodywork with shiatsu elements, Rebozo massage and traditional healing rituals.',
+    
+    // Yan - Therapeuten Page
+    'yan_name' => 'Yan',
+    'yan_specialty_therapeuten' => 'Vibrational Work & Aquatic Bodywork',
+    'yan_description_therapeuten' => 'Calm, mindful approach with shiatsu, Tok Sen, Sadhu Boards and Watsu. Focus on energetic aspects.',
+    
+    // Manuela Spaggiari
+    'manuela_name' => 'Manuela Spaggiari',
+    'manuela_specialty' => 'Thai Yoga Massage',
+    'manuela_description' => 'Combination of acupressure, stretches, and reflexology massage for deep relaxation and energy work.',
+    'manuela_website' => 'https://www.manuela-yoga-massage.com',
+    'manuela_email' => 'info@manuela-yoga-massage.com',
+    
+    // Ana Morin
+    'ana_name' => 'Ana Morin',
+    'ana_specialty' => 'Psychotherapy & Trauma Work',
+    'ana_description' => 'Ana offers deep psychotherapeutic work with a focus on trauma healing and emotional integration.',
+    'ana_website' => 'https://anamorin.com',
+    'ana_email' => 'ana@anamorin.com',
+    
+    // François de Wet
+    'francois_name' => 'François de Wet',
+    'francois_title' => 'M.A. Psychology',
+    'francois_specialty' => 'Body-Oriented Psychotherapy',
+    'francois_description' => 'François works with body-oriented methods for treating trauma and stress.',
+    'francois_website' => 'https://francoisdewet.com',
+    
+    // Claudia Arndt
+    'claudia_name' => 'Claudia Arndt',
+    'claudia_specialty' => 'Yoga',
+    'claudia_description' => 'Yoga every Tuesday at 09:00 in the studio.',
+];
+?>

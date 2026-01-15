@@ -1,301 +1,191 @@
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/navigation.php'; ?>
+<?php
+// rent.php - Rent page translations
 
-<!-- Hero Section -->
-<section class="rent-hero">
-    <div class="rent-hero-content">
-        <h1><?php echo t('rent_hero_title'); ?></h1>
-        <p class="rent-hero-subtitle"><?php echo t('rent_hero_subtitle'); ?></p>
-        
-        <!-- Video -->
-        <div class="rent-hero-video">
-            <video autoplay muted loop playsinline>
-                <source src="assets/videos/sbkg.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-</section>
+$trans_de = [
+    // Hero
+    'rent_hero_title' => 'Repräsentative Praxisräume zur Untermiete (P-Berg)',
+    'rent_hero_subtitle' => 'Coaching, Massage & Video',
+    
+    // Introduction
+    'rent_intro_text' => 'Suchst du mehr als nur vier Wände? Suchst du einen Ort, an dem sich deine Klienten von der ersten Sekunde an sicher und wohl fühlen? Willkommen bei OR Natural Balance in der Immanuelkirchstraße 22, 10405 Berlin (Winsviertel). Wir bieten repräsentative Praxisräume zur Untermiete in absoluter Top Lage. Unsere Praxis ist der perfekte Ort für alle, die Professionalität mit einer warmen Atmosphäre verbinden wollen.',
+    
+    // Trust Advantage
+    'rent_trust_title' => 'Dein Vertrauens-Vorsprung',
+    'rent_trust_text' => 'Starte nicht bei Null! OR Natural Balance ist etabliert und beliebt (4,7 Sterne bei Google aus 225 Bewertungen). Wenn du bei uns mietest, profitierst du direkt von diesem positiven Image und dem Vertrauen, das wir uns bei den Patienten im Kiez bereits aufgebaut haben.',
+    
+    // Our Rooms
+    'rent_rooms_title' => 'Unsere Räume (Wähle, was zu dir passt)',
+    'rent_rooms_intro' => 'Die Praxis ist ebenerdig (barrierefrei) und bietet eine hochwertige Ausstattung mit warmem Licht, echten Pflanzen und "Bali-Vibe". Inklusive WLAN, Reinigung, Teeküche & Wartebereich.',
+    
+    'rent_large_title' => 'Der Große Raum (ca. 30 m²)',
+    'rent_large_size' => 'Größe: ca. 30 m²',
+    'rent_large_ideal' => 'Perfekt für: Psychotherapie, Osteopathie, Paartherapie, Coaching, Gruppen',
+    'rent_large_features' => 'Viel Bewegungsfläche, 2 Massageliegen + gemütliche Lounge-Ecke mit Sofa & Sesseln für Gespräche.',
+    
+    'rent_small_title' => 'Der Kleine Raum (ca. 6 m²)',
+    'rent_small_size' => 'Größe: ca. 6 m²',
+    'rent_small_ideal' => 'Perfekt für: Massage, TCM / Akupunktur, Reiki, Fokus-Arbeit',
+    'rent_small_features' => 'Der gemütliche Rückzugsort ("Kokon"), voll ausgestattet mit Liege.',
+    
+    // Pricing Models
+    'rent_pricing_title' => 'Deine Preis-Modelle (Maximale Freiheit)',
+    
+    'rent_option_a_title' => 'Option A: Flexibel (Stundenweise)',
+    'rent_option_a_subtitle' => 'Ideal zum Starten ohne Risiko',
+    'rent_small_room' => 'Kleiner Raum',
+    'rent_small_hourly' => '20 € pro Stunde',
+    'rent_large_room' => 'Großer Raum',
+    'rent_large_hourly' => '30 € pro Stunde',
+    
+    'rent_option_b_title' => 'Option B: Monatspauschale (Fester Wochentag)',
+    'rent_option_b_subtitle' => 'Dein eigener Tag pro Woche mit eigenem Schlüssel',
+    'rent_option_b_note' => 'Verfügbare Tage: Du kannst frei wählen zwischen Montag bis Samstag. (Laufzeit: Flexibel ab 1 Monat möglich)',
+    
+    'rent_small_morning' => 'Vormittag (06:00–14:00): 160 € / Monat (Ø nur ca. 5,00 € / Std.)',
+    'rent_small_evening' => 'Abend (14:30–22:30): 210 € / Monat (Ø nur ca. 6,50 € / Std.)',
+    
+    'rent_large_morning' => 'Vormittag (06:00–14:00): 280 € / Monat (Ø nur ca. 8,75 € / Std.)',
+    'rent_large_evening' => 'Abend (14:30–22:30): 340 € / Monat (Ø nur ca. 10,60 € / Std.)',
+    
+    // Business Booster
+    'rent_booster_title' => 'Dein Business-Booster (Dein Sichtbarkeits-Paket)',
+    'rent_booster_intro' => 'Wir wollen, dass dein Business floriert. Wenn du dich entscheidest, deine Praxis bei uns langfristig aufzubauen (ab 6 Monaten Laufzeit), schenken wir dir unser Exklusives Marketing-Paket:',
+    
+    'rent_booster_video_title' => 'Professioneller Video-Content',
+    'rent_booster_video_text' => 'Wir produzieren für dich ein 60-Sekunden Vorstellungsvideo (Imagefilm) und 2 Reels. Gedreht von einem professionellen Videografen mit Netflix-zertifizierter Kameratechnik. (Der Marktwert dieses kompletten Medien-Pakets liegt bei ca. 1.000 € – für dich als Mieter ist es inklusive!)',
+    
+    'rent_booster_reach_title' => 'Maximale Reichweite & Rechte:',
+    'rent_booster_reach_1' => 'Dein Eigentum (Prio 1): Du erhältst die vollen Marketingrechte an dem Material und kannst es frei für deine eigene Website & Kanäle nutzen.',
+    'rent_booster_reach_2' => 'Homepage (Optional): Auf Wunsch binden wir dein Video direkt auf der OR Natural Balance Homepage ein.',
+    'rent_booster_reach_3' => 'Social Media (Optional): Wenn du möchtest, veröffentlichen wir die 2 Reels auch auf unserem gemeinsamen Praxis-Instagram-Kanal.',
+    
+    'rent_booster_automation' => 'Automatisierung: Nutzung unseres Online-Buchungssystems inklusive.',
+    'rent_booster_loyalty' => 'Treue-Bonus: Wir begleiten dein Wachstum! Alle weiteren 6 Monate schenken wir dir 4 neue Reels, damit dein Content immer frisch bleibt.',
+    'rent_booster_learn_more' => 'Mehr über Video-Produktion erfahren',
+    
+    // Application
+    'rent_application_title' => 'Bewirb dich bei uns',
+    'rent_application_intro' => 'Da uns die Harmonie in der Praxis und die Qualität für unsere Patienten sehr wichtig sind, schauen wir genau, wer zu uns passt.',
+    'rent_application_q1' => 'Wer bist du und was bietest du an?',
+    'rent_application_q2' => 'Welcher Raum & welches Modell interessiert dich?',
+    'rent_application_q3' => 'Warum passt du zu uns?',
+    'rent_application_note' => 'Wir freuen uns auf dich! (Bitte nicht unangemeldet vorbeikommen, um laufende Behandlungen nicht zu stören. Video-Rundgang auf Anfrage möglich!)',
+    'rent_application_button' => 'Jetzt bewerben',
+    
+    // Form Labels
+    'form_name' => 'Name',
+    'form_email' => 'E-Mail',
+    'form_phone' => 'Telefon',
+    'form_website' => 'Website',
+    'form_q1_placeholder' => 'z.B. Ich bin Heilpraktikerin und biete Akupunktur und TCM an...',
+    'form_q3_placeholder' => 'z.B. Ich schätze eine warme, professionelle Atmosphäre und arbeite mit ähnlichen Werten...',
+    'form_room_label' => 'Raum',
+    'form_both_rooms' => 'Beide Räume',
+    'form_model_label' => 'Mietmodell',
+    'form_model_hourly' => 'Stundenweise (flexibel)',
+    'form_model_monthly' => 'Monatspauschale (fester Tag)',
+    'form_model_notsure' => 'Noch nicht sicher',
+    'form_additional' => 'Zusätzliche Informationen (optional)',
+    'form_additional_placeholder' => 'Gibt es noch etwas, das wir wissen sollten?',
+    
+    // Form Messages
+    'form_success_title' => 'Vielen Dank!',
+    'form_success_message' => 'Deine Bewerbung wurde erfolgreich gesendet. Wir melden uns bald bei dir!',
+    'form_error_title' => 'Fehler',
+    'form_error_message' => 'Es gab ein Problem beim Senden. Bitte versuche es erneut oder schreibe uns direkt eine E-Mail.',
+];
 
-<!-- Introduction -->
-<section class="rent-intro">
-    <div class="section-content">
-        <p><?php echo t('rent_intro_text'); ?></p>
-    </div>
-</section>
-
-<!-- Trust Advantage -->
-<section class="rent-trust">
-    <div class="section-content">
-        <h2><?php echo t('rent_trust_title'); ?></h2>
-        <p><?php echo t('rent_trust_text'); ?></p>
-    </div>
-</section>
-
-<!-- Our Rooms -->
-<section class="rent-rooms">
-    <div class="section-content">
-        <h2><?php echo t('rent_rooms_title'); ?></h2>
-        <p class="rooms-intro"><?php echo t('rent_rooms_intro'); ?></p>
-        
-        <div class="rooms-grid">
-            
-            <!-- Large Room -->
-            <div class="room-card">
-                <div class="room-icon">🏠</div>
-                <h3><?php echo t('rent_large_title'); ?></h3>
-                <p class="room-size"><?php echo t('rent_large_size'); ?></p>
-                <p class="room-ideal"><?php echo t('rent_large_ideal'); ?></p>
-                <p class="room-features"><?php echo t('rent_large_features'); ?></p>
-            </div>
-            
-            <!-- Small Room -->
-            <div class="room-card">
-                <div class="room-icon">🛋️</div>
-                <h3><?php echo t('rent_small_title'); ?></h3>
-                <p class="room-size"><?php echo t('rent_small_size'); ?></p>
-                <p class="room-ideal"><?php echo t('rent_small_ideal'); ?></p>
-                <p class="room-features"><?php echo t('rent_small_features'); ?></p>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-<!-- Pricing Models -->
-<section class="rent-pricing">
-    <div class="section-content">
-        <h2><?php echo t('rent_pricing_title'); ?></h2>
-        
-        <div class="pricing-options">
-            
-            <!-- Option A: Flexible -->
-            <div class="pricing-card">
-                <h3><?php echo t('rent_option_a_title'); ?></h3>
-                <p class="pricing-subtitle"><?php echo t('rent_option_a_subtitle'); ?></p>
-                <div class="pricing-details">
-                    <p><strong><?php echo t('rent_small_room'); ?>:</strong> <?php echo t('rent_small_hourly'); ?></p>
-                    <p><strong><?php echo t('rent_large_room'); ?>:</strong> <?php echo t('rent_large_hourly'); ?></p>
-                </div>
-            </div>
-            
-            <!-- Option B: Monthly Flat Rate -->
-            <div class="pricing-card pricing-featured">
-                <h3><?php echo t('rent_option_b_title'); ?></h3>
-                <p class="pricing-subtitle"><?php echo t('rent_option_b_subtitle'); ?></p>
-                <p class="pricing-note"><?php echo t('rent_option_b_note'); ?></p>
-                
-                <div class="pricing-table">
-                    <h4><?php echo t('rent_small_room'); ?>:</h4>
-                    <ul>
-                        <li><?php echo t('rent_small_morning'); ?></li>
-                        <li><?php echo t('rent_small_evening'); ?></li>
-                    </ul>
-                    
-                    <h4><?php echo t('rent_large_room'); ?>:</h4>
-                    <ul>
-                        <li><?php echo t('rent_large_morning'); ?></li>
-                        <li><?php echo t('rent_large_evening'); ?></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-<!-- Business Booster -->
-<section class="rent-booster">
-    <div class="section-content">
-        <h2><?php echo t('rent_booster_title'); ?></h2>
-        <p class="booster-intro"><?php echo t('rent_booster_intro'); ?></p>
-        
-        <div class="booster-content">
-            <h3><?php echo t('rent_booster_video_title'); ?></h3>
-            <p><?php echo t('rent_booster_video_text'); ?></p>
-            
-            <h4><?php echo t('rent_booster_reach_title'); ?></h4>
-            <ul class="booster-list">
-                <li><?php echo t('rent_booster_reach_1'); ?></li>
-                <li><?php echo t('rent_booster_reach_2'); ?></li>
-                <li><?php echo t('rent_booster_reach_3'); ?></li>
-            </ul>
-            
-            <div class="booster-extras">
-                <p><strong><?php echo t('rent_booster_automation'); ?></strong></p>
-                <p><strong><?php echo t('rent_booster_loyalty'); ?></strong></p>
-            </div>
-            
-            <a href="video-production.php?lang=<?php echo $lang; ?>" class="booster-link">
-                <?php echo t('rent_booster_learn_more'); ?> →
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Application Section with Form -->
-<section class="rent-application">
-    <div class="section-content">
-        <h2><?php echo t('rent_application_title'); ?></h2>
-        <p><?php echo t('rent_application_intro'); ?></p>
-        
-        <!-- Success/Error Message Area -->
-        <div id="form-message-container"></div>
-        
-        <!-- Application Form -->
-        <form class="rent-application-form" id="applicationForm" method="POST">
-            
-            <!-- Personal Info -->
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name"><?php echo t('form_name'); ?> *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email"><?php echo t('form_email'); ?> *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="phone"><?php echo t('form_phone'); ?></label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                
-                <div class="form-group">
-                    <label for="website"><?php echo t('form_website'); ?></label>
-                    <input type="url" id="website" name="website" placeholder="https://">
-                </div>
-            </div>
-            
-            <!-- Application Questions -->
-            <div class="form-group">
-                <label for="question1"><?php echo t('rent_application_q1'); ?> *</label>
-                <textarea id="question1" name="question1" rows="4" required placeholder="<?php echo t('form_q1_placeholder'); ?>"></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="question2"><?php echo t('rent_application_q2'); ?> *</label>
-                <div class="form-checkboxes">
-                    <div class="checkbox-group">
-                        <strong><?php echo t('form_room_label'); ?>:</strong>
-                        <label class="checkbox-label">
-                            <input type="radio" name="room" value="small" required>
-                            <?php echo t('rent_small_room'); ?> (6m²)
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="radio" name="room" value="large" required>
-                            <?php echo t('rent_large_room'); ?> (30m²)
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="radio" name="room" value="both" required>
-                            <?php echo t('form_both_rooms'); ?>
-                        </label>
-                    </div>
-                    
-                    <div class="checkbox-group">
-                        <strong><?php echo t('form_model_label'); ?>:</strong>
-                        <label class="checkbox-label">
-                            <input type="radio" name="model" value="hourly" required>
-                            <?php echo t('form_model_hourly'); ?>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="radio" name="model" value="monthly" required>
-                            <?php echo t('form_model_monthly'); ?>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="radio" name="model" value="not_sure" required>
-                            <?php echo t('form_model_notsure'); ?>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="question3"><?php echo t('rent_application_q3'); ?> *</label>
-                <textarea id="question3" name="question3" rows="5" required placeholder="<?php echo t('form_q3_placeholder'); ?>"></textarea>
-            </div>
-            
-            <!-- Additional Notes -->
-            <div class="form-group">
-                <label for="additional"><?php echo t('form_additional'); ?></label>
-                <textarea id="additional" name="additional" rows="3" placeholder="<?php echo t('form_additional_placeholder'); ?>"></textarea>
-            </div>
-            
-            <!-- Submit Button -->
-            <button type="submit" class="rent-cta-button" id="submitButton">
-                <?php echo t('rent_application_button'); ?>
-            </button>
-            
-        </form>
-        
-        <script>
-        document.getElementById('applicationForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // מונע reload
-            
-            const form = this;
-            const submitButton = document.getElementById('submitButton');
-            const messageContainer = document.getElementById('form-message-container');
-            
-            // Disable button
-            submitButton.disabled = true;
-            submitButton.textContent = '<?php echo $lang === 'de' ? 'Wird gesendet...' : 'Sending...'; ?>';
-            
-            // Collect form data
-            const formData = new FormData(form);
-            
-            // Send AJAX request
-            fetch('send-application.php?ajax=1&lang=<?php echo $lang; ?>', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Show message
-                if (data.success) {
-                    messageContainer.innerHTML = `
-                        <div class="form-message form-success">
-                            <div class="message-icon">✓</div>
-                            <strong><?php echo t('form_success_title'); ?></strong><br>
-                            <?php echo t('form_success_message'); ?>
-                        </div>
-                    `;
-                    form.reset(); // נקה את הטופס
-                } else {
-                    messageContainer.innerHTML = `
-                        <div class="form-message form-error">
-                            <div class="message-icon">✗</div>
-                            <strong><?php echo t('form_error_title'); ?></strong><br>
-                            <?php echo t('form_error_message'); ?>
-                        </div>
-                    `;
-                }
-                
-                // Scroll to message
-                messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // Re-enable button
-                submitButton.disabled = false;
-                submitButton.textContent = '<?php echo t('rent_application_button'); ?>';
-            })
-            .catch(error => {
-                messageContainer.innerHTML = `
-                    <div class="form-message form-error">
-                        <div class="message-icon">✗</div>
-                        <strong><?php echo t('form_error_title'); ?></strong><br>
-                        <?php echo t('form_error_message'); ?>
-                    </div>
-                `;
-                submitButton.disabled = false;
-                submitButton.textContent = '<?php echo t('rent_application_button'); ?>';
-            });
-        });
-        </script>
-        
-        <p class="application-note"><?php echo t('rent_application_note'); ?></p>
-    </div>
-</section>
-
-<?php include 'includes/footer.php'; ?>
+$trans_en = [
+    // Hero
+    'rent_hero_title' => 'Prestigious Practice Room for Sublease (P-Berg)',
+    'rent_hero_subtitle' => 'Coaching, Massage & Video',
+    
+    // Introduction
+    'rent_intro_text' => 'Are you looking for more than just four walls? Are you looking for a place where your clients feel safe and comfortable from the very first second? Welcome to OR Natural Balance at Immanuelkirchstraße 22, 10405 Berlin (Winsviertel). We offer prestigious practice rooms for sublease in an absolute top location. Our practice is the perfect place for anyone wanting to combine professionalism with a warm atmosphere.',
+    
+    // Trust Advantage
+    'rent_trust_title' => 'Your Head Start in Trust',
+    'rent_trust_text' => 'Don\'t start from zero! OR Natural Balance is established and popular (4.7 stars on Google based on 225 reviews). When you rent with us, you benefit directly from this positive image and the trust we have already built with patients in the neighborhood.',
+    
+    // Our Rooms
+    'rent_rooms_title' => 'Our Rooms (Choose what fits you)',
+    'rent_rooms_intro' => 'The practice is on the ground floor (barrier-free) and offers high-quality equipment with warm light, real plants, and a "Bali-Vibe." Includes WiFi, cleaning, kitchenette & waiting area.',
+    
+    'rent_large_title' => 'The Large Room (approx. 30 m²)',
+    'rent_large_size' => 'Size: approx. 30 m²',
+    'rent_large_ideal' => 'Perfect for: Psychotherapy, Osteopathy, Couples Therapy, Coaching, Groups',
+    'rent_large_features' => 'Plenty of space for movement, 2 massage tables + a cozy lounge corner with sofa & armchairs for conversations.',
+    
+    'rent_small_title' => 'The Small Room (approx. 6 m²)',
+    'rent_small_size' => 'Size: approx. 6 m²',
+    'rent_small_ideal' => 'Perfect for: Massage, TCM / Acupuncture, Reiki, Focus work',
+    'rent_small_features' => 'The cozy retreat ("Cocoon"), fully equipped with a massage table.',
+    
+    // Pricing Models
+    'rent_pricing_title' => 'Your Pricing Models (Maximum Freedom)',
+    
+    'rent_option_a_title' => 'Option A: Flexible (Hourly)',
+    'rent_option_a_subtitle' => 'Ideal for starting out without risk',
+    'rent_small_room' => 'Small Room',
+    'rent_small_hourly' => '€20 per hour',
+    'rent_large_room' => 'Large Room',
+    'rent_large_hourly' => '€30 per hour',
+    
+    'rent_option_b_title' => 'Option B: Monthly Flat Rate (Fixed Weekday)',
+    'rent_option_b_subtitle' => 'Your own day per week with your own key',
+    'rent_option_b_note' => 'Available Days: You can freely choose between Monday to Saturday. (Term: Flexible, starting from 1 month)',
+    
+    'rent_small_morning' => 'Morning (06:00 – 14:00): €160 / month (Ø only approx. €5.00 / hr)',
+    'rent_small_evening' => 'Evening (14:30 – 22:30): €210 / month (Ø only approx. €6.50 / hr)',
+    
+    'rent_large_morning' => 'Morning (06:00 – 14:00): €280 / month (Ø only approx. €8.75 / hr)',
+    'rent_large_evening' => 'Evening (14:30 – 22:30): €340 / month (Ø only approx. €10.60 / hr)',
+    
+    // Business Booster
+    'rent_booster_title' => 'Your Business Booster (Your Visibility Package)',
+    'rent_booster_intro' => 'We want your business to flourish. If you decide to build your practice with us long-term (6 months+ commitment), we will gift you our Exclusive Marketing Package:',
+    
+    'rent_booster_video_title' => 'Professional Video Content',
+    'rent_booster_video_text' => 'We produce a 60-second introduction video (Image Film) and 2 Reels for you. Filmed by a professional videographer using Netflix-certified camera technology. (The market value of this complete media package is approx. €1,000 – included for you as a tenant!)',
+    
+    'rent_booster_reach_title' => 'Maximum Reach & Rights:',
+    'rent_booster_reach_1' => 'Your Property (Prio 1): You receive full marketing rights to the material and can use it freely for your own website & channels.',
+    'rent_booster_reach_2' => 'Homepage (Optional): Upon request, we will embed your video directly on the OR Natural Balance Homepage.',
+    'rent_booster_reach_3' => 'Social Media (Optional): If you wish, we will also publish the 2 Reels on our joint practice Instagram channel.',
+    
+    'rent_booster_automation' => 'Automation: Use of our Online Booking System included.',
+    'rent_booster_loyalty' => 'Loyalty Bonus: We support your growth! For every additional 6 months, we gift you 4 new Reels so your content stays fresh.',
+    'rent_booster_learn_more' => 'Learn more about Video Production',
+    
+    // Application
+    'rent_application_title' => 'Apply With Us',
+    'rent_application_intro' => 'Since harmony in the practice and quality for our patients are very important to us, we look closely at who fits in.',
+    'rent_application_q1' => 'Who are you and what do you offer?',
+    'rent_application_q2' => 'Which room & which model are you interested in?',
+    'rent_application_q3' => 'Why do you fit in with us?',
+    'rent_application_note' => 'We look forward to meeting you! (Please do not drop by unannounced to avoid disturbing ongoing treatments. Video tour available upon request!)',
+    'rent_application_button' => 'Apply Now',
+    
+    // Form Labels
+    'form_name' => 'Name',
+    'form_email' => 'Email',
+    'form_phone' => 'Phone',
+    'form_website' => 'Website',
+    'form_q1_placeholder' => 'e.g. I am a naturopath offering acupuncture and TCM...',
+    'form_q3_placeholder' => 'e.g. I appreciate a warm, professional atmosphere and work with similar values...',
+    'form_room_label' => 'Room',
+    'form_both_rooms' => 'Both Rooms',
+    'form_model_label' => 'Rental Model',
+    'form_model_hourly' => 'Hourly (flexible)',
+    'form_model_monthly' => 'Monthly flat rate (fixed day)',
+    'form_model_notsure' => 'Not sure yet',
+    'form_additional' => 'Additional Information (optional)',
+    'form_additional_placeholder' => 'Is there anything else we should know?',
+    
+    // Form Messages
+    'form_success_title' => 'Thank You!',
+    'form_success_message' => 'Your application has been sent successfully. We will contact you soon!',
+    'form_error_title' => 'Error',
+    'form_error_message' => 'There was a problem sending your application. Please try again or email us directly.',
+];
+?>
